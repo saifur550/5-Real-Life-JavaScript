@@ -6,6 +6,7 @@ function getById (id){return document.getElementById(id);};
 const subhanAllahDisplay = getById('subhanAllahDisplay')
 const subhanAllahIncrimentBtn = getById('subhanAllahIncrimentBtn')
 const subhanAllahDecrimentBtn = getById('subhanAllahDecrimentBtn')
+const resetBtn = getById('resetBtn')
 
 
 let subhanAllahValue =0
@@ -18,6 +19,7 @@ subhanAllahIncrimentBtn.addEventListener('click', function(){
    subhanAllahValue += 1
    subhanAllahDisplay.innerText = subhanAllahValue
 })
+
 
 subhanAllahDecrimentBtn.addEventListener('click', function(){
     if(subhanAllahValue === 0){
@@ -75,4 +77,11 @@ allahAkberDecrimentBtn.addEventListener('click', function(){
     allahAkberValue -= 1
     allahAkberDisplay.innerText = allahAkberValue
     
+})
+
+resetBtn.addEventListener('click', function(){
+    console.log('click');
+    subhanAllahDisplay.innerText = 0
+    alhamdulillahDisplay.innerText = 0
+    allahAkberDisplay.innerText = 0
 })
